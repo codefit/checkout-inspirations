@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Pages - Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .card-title {
+            color: #59A618;
+        }
+        .btn-demo {
+            background: #59A618;
+            border-color: #59A618;
+            color: white;
+        }
+        .btn-demo:hover {
+            background: #4a8a14;
+            border-color: #4a8a14;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Checkout Pages - Demo</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Checkout (Original)</h5>
+                <p class="card-text">
+                    Třísloupcový layout s fixní levou a pravou částí. Obsahuje slide widgety, které se vysunují zleva a překrývají střední část obsahu.
+                </p>
+                <h6>Funkce:</h6>
+                <ul>
+                    <li>Slide widgety zleva</li>
+                    <li>Fixní boční panely</li>
+                    <li>Scrollovatelný střední obsah</li>
+                    <li>Gradient overlay na pozadí</li>
+                    <li>Kontaktní informace v levé části</li>
+                </ul>
+                <a href="checkout.html" class="btn btn-demo">Zobrazit Checkout</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Checkout V2</h5>
+                <p class="card-text">
+                    Dvousloupcový layout s formuláři vlevo a rekapitulací vpravo. Obsahuje accordion sekce a slide widgety pro výběr dopravy a platby.
+                </p>
+                <h6>Funkce:</h6>
+                <ul>
+                    <li>Dvousloupcový layout (50/50)</li>
+                    <li>Accordion pro platební údaje</li>
+                    <li>Slide widgety zleva</li>
+                    <li>Sticky pravá kolona</li>
+                    <li>Firemní údaje checkbox</li>
+                    <li>Bootstrap Icons</li>
+                </ul>
+                <a href="checkout-v2.html" class="btn btn-demo">Zobrazit Checkout V2</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Technické informace</h5>
+                <h6>Závislosti:</h6>
+                <ul>
+                    <li>Bootstrap 5.3.2 (CDN)</li>
+                    <li>Bootstrap Icons 1.11.1 (CDN)</li>
+                    <li>jQuery 3.7.1 (CDN)</li>
+                </ul>
+                <h6>Soubory:</h6>
+                <ul>
+                    <li><code>css/checkout.css</code> - Styly pro původní checkout</li>
+                    <li><code>css/checkout-v2.css</code> - Styly pro checkout v2</li>
+                    <li><code>js/checkout.js</code> - JavaScript pro původní checkout</li>
+                    <li><code>js/checkout-v2.js</code> - JavaScript pro checkout v2</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+            <h6>Poznámky:</h6>
+            <p class="mb-0">
+                Všechny stránky jsou plně responzivní a připravené k použití. Obrázky jsou načítány z externích URL. 
+                Pro lokální vývoj můžete obrázky uložit do složky <code>images/</code>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

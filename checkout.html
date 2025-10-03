@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objednávka - Checkout</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Left Section - Static Image -->
+        <div class="left-section">
+            <div class="image-container">
+                <img src="https://static.flercdn.net/s/pfm_53/12902176_4_184622240.jpg" alt="Kytice" class="main-image">
+                <div class="logo-overlay">
+                    <div class="logo">
+                        <img src="https://mobilnilekarna.cz/logo.svg" alt="Mobilní lékárna" height="64px">
+                    </div>
+                    <div class="contact-info" hidden>
+                        <a href="tel:+420123456789" class="contact-item contact-link">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Telefon</span>
+                                <span class="contact-value">+420 123 456 789</span>
+                            </div>
+                        </a>
+                        <a href="mailto:info@mobilnilekarna.cz" class="contact-item contact-link">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">info@mobilnilekarna.cz</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Center Section - Scrollable Content -->
+        <div class="center-section">
+            <div class="content-wrapper">
+                <!-- Header -->
+                <div class="checkout-header">
+                    <h1>Objednávka</h1>
+                    <a href="#" class="back-link">
+                        <i class="bi bi-arrow-left"></i> Zpět do košíku
+                    </a>
+                </div>
+
+                <!-- Delivery Terms -->
+                <div class="delivery-terms d-flex align-items-center gap-3">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p><strong>Termín odeslání celého balíčku:</strong> do 4 dnů od přijetí platby. <br>
+                        Při úhradě ihned odešleme do 4 dnů (úterý).
+                    </p>
+                </div>
+
+                <!-- Customer Information -->
+                <div class="customer-info">
+                    <div class="info-section clickable-section" data-overlay="country">
+                        <div class="info-content">
+                            <span class="info-label">Země dodání:</span>
+                            <span class="info-value">Česká republika. Platba v Kč.</span>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="info-section clickable-section" data-overlay="email">
+                        <div class="info-content">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">Vyplnit e-mail</span>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="info-section clickable-section" data-overlay="mobile">
+                        <div class="info-content">
+                            <span class="info-label">Mobil</span>
+                            <span class="info-value">Vyplnit číslo</span>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+
+                    <div class="info-section clickable-section" data-overlay="address">
+                        <div class="info-content">
+                            <span class="info-label">Adresa</span>
+                            <span class="info-value">Dodací údaje</span>
+                        </div>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Delivery Section -->
+                <div class="delivery-section">
+                    <div class="section-header">
+                        <h3>Doprava</h3>
+                        <span class="price">95 Kč</span>
+                    </div>
+                    <div class="delivery-option clickable-section" data-overlay="delivery">
+                        <div class="delivery-icon">
+                            <img src="images/transports/packeta-cz.png" alt="Zásilkovna" class="delivery-icon-img">
+                        </div>
+                        <div class="delivery-details">
+                            <h4>Zásilkovna</h4>
+                            <a href="#" class="delivery-link">Vyberte výdejní místo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Section -->
+                <div class="payment-section">
+                    <div class="section-header">
+                        <h3>Platba</h3>
+                        <span class="price free">ZDARMA</span>
+                    </div>
+                    <div class="payment-option clickable-section" data-overlay="payment">
+                        <div class="payment-icon">
+                            <img src="images/payments/card.png" alt="Karta" class="payment-icon-img">
+                        </div>
+                        <div class="payment-details">
+                            <h4>Převod</h4>
+                            <p>Platba bankovním převodem</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discount Section -->
+                <div class="discount-section clickable-section" data-overlay="discount">
+                    <div class="info-content">
+                        <span class="info-label">Slevový nebo nákupní poukaz</span>
+                        <span class="info-value">Máte slevový kód nebo nákupní poukaz?</span>
+                    </div>
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+
+                <!-- Note Section -->
+                <div class="note-section clickable-section" data-overlay="note">
+                    <div class="info-content">
+                        <span class="info-label">Poznámka</span>
+                        <span class="info-value">Volitelná poznámka nebo vzkaz pro prodejce.</span>
+                    </div>
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section - Static Order Summary -->
+        <div class="right-section">
+            <div class="order-summary">
+                <!-- Order Summary -->
+                <div class="summary-section">
+                    <h3>Shrnutí objednávky</h3>
+                    <!-- Product Summary -->
+                    <div class="product-summary">
+                        <div class="product-image">
+                            <img src="https://img-cdn.heureka.group/v1/d6d1da56-7ed6-57ba-9266-35021d80fe06.jpg"
+                                alt="Gravírovaná biothane psí známka">
+                        </div>
+                        <div class="product-details">
+                            <h3>Gravírovaná biothane psí známka</h3>
+                            <p class="shipping-time">K odeslání do 4 dnů</p>
+                            <p class="price">350 Kč</p>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span>Cena za zboží</span>
+                        <span>350 Kč</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Poštovné a balné</span>
+                        <span>95 Kč</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Cena celkem</span>
+                        <span>445 Kč</span>
+                    </div>
+                    
+                    <!-- Terms and Privacy Agreement -->
+                    <div class="terms-agreement">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="terms-agreement" class="terms-checkbox">
+                            <label for="terms-agreement" class="checkbox-label">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">
+                                    Souhlasím s <a href="#" class="terms-link">obchodními podmínkami</a> a <a href="#" class="terms-link">ochranou osobních údajů</a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-order" disabled>Objednávka zavazující k platbě</button>
+                    <p class="order-note">Než odešlete objednávku</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widget Components -->
+    <!-- Country Widget -->
+    <div class="widget-container" id="country-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Země dodání</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <p>Vyberte zemi dodání:</p>
+                <div class="country-options">
+                    <div class="country-option active">
+                        <span>🇨🇿 Česká republika</span>
+                        <span>Platba v Kč</span>
+                    </div>
+                    <div class="country-option">
+                        <span>🇸🇰 Slovensko</span>
+                        <span>Platba v EUR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Widget -->
+    <div class="widget-container" id="email-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Email</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="form-group">
+                    <label for="email-input">Email adresa</label>
+                    <input type="email" id="email-input" class="form-control" placeholder="Zadejte email">
+                    <small class="form-text">Na tento email vám pošleme potvrzení objednávky</small>
+                </div>
+                <button class="btn btn-primary">Uložit <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Widget -->
+    <div class="widget-container" id="mobile-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Mobilní telefon</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="form-group">
+                    <label for="mobile-input">Telefonní číslo</label>
+                    <input type="tel" id="mobile-input" class="form-control" placeholder="+420 123 456 789">
+                    <small class="form-text">Pro případné dotazy k objednávce</small>
+                </div>
+                <button class="btn btn-primary">Uložit <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Widget -->
+    <div class="widget-container" id="address-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Dodací adresa</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="form-group">
+                    <label for="street">Ulice a číslo popisné</label>
+                    <input type="text" id="street" class="form-control" placeholder="Václavské náměstí 1">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="city">Město</label>
+                            <input type="text" id="city" class="form-control" placeholder="Praha">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="zip">PSČ</label>
+                            <input type="text" id="zip" class="form-control" placeholder="110 00">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Uložit <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delivery Widget -->
+    <div class="widget-container" id="delivery-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Způsob dopravy</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="delivery-options">
+                    <div class="delivery-option-card active">
+                        <div class="option-icon">
+                            <img src="images/packeta-cz.png" alt="Zásilkovna" class="delivery-icon-img">
+                        </div>
+                        <div class="option-details">
+                            <h4>Zásilkovna</h4>
+                            <p>Na výdejní místo</p>
+                            <span class="price">95 Kč</span>
+                        </div>
+                    </div>
+                    <div class="delivery-option-card">
+                        <div class="option-icon">
+                            <img src="images/cp-np.png" alt="Česká pošta" class="delivery-icon-img">
+                        </div>
+                        <div class="option-details">
+                            <h4>Česká pošta</h4>
+                            <p>Na poštu</p>
+                            <span class="price">120 Kč</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Vybrat <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Widget -->
+    <div class="widget-container" id="payment-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Způsob platby</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="payment-options">
+                    <div class="payment-option-card active">
+                        <div class="option-icon">
+                            <i class="bi bi-bank"></i>
+                        </div>
+                        <div class="option-details">
+                            <h4>Bankovní převod</h4>
+                            <p>Platba bankovním převodem</p>
+                            <span class="price free">ZDARMA</span>
+                        </div>
+                    </div>
+                    <div class="payment-option-card">
+                        <div class="option-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <div class="option-details">
+                            <h4>Kartou online</h4>
+                            <p>Platba kartou</p>
+                            <span class="price">5 Kč</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Vybrat <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discount Widget -->
+    <div class="widget-container" id="discount-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Slevový kód</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="form-group">
+                    <label for="discount-code">Slevový kód</label>
+                    <input type="text" id="discount-code" class="form-control" placeholder="Zadejte slevový kód">
+                    <small class="form-text">Máte slevový kód nebo nákupní poukaz?</small>
+                </div>
+                <button class="btn btn-primary">Aplikovat <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note Widget -->
+    <div class="widget-container" id="note-widget">
+        <div class="widget-content">
+            <div class="widget-header">
+                <h3>Poznámka k objednávce</h3>
+                <button class="btn-close-widget">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="widget-body">
+                <div class="form-group">
+                    <label for="order-note">Poznámka</label>
+                    <textarea id="order-note" class="form-control" rows="4" placeholder="Volitelná poznámka nebo vzkaz pro prodejce..."></textarea>
+                </div>
+                <button class="btn btn-primary">Uložit <i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/checkout.js"></script>
+</body>
+</html>
+
