@@ -70,7 +70,7 @@ $(document).ready(function() {
         });
         
         // Handle close button clicks
-        $('.btn-close').on('click', function(e) {
+        $('.btn-close-widget').on('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             hideWidget();
