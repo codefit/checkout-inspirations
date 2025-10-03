@@ -641,20 +641,26 @@ body {
     margin: 0;
 }
 
-.btn-close {
+.btn-close-widget {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--text-light);
+    color: #666;
     cursor: pointer;
-    padding: 4px;
-    border-radius: 4px;
+    padding: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s ease;
+    outline: none;
 }
 
-.btn-close:hover {
+.btn-close-widget:hover {
     background: #e9ecef;
-    color: var(--text-color);
+    color: #333;
 }
 
 .widget-body {
@@ -1013,4 +1019,15 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
     background: #a8a8a8;
+}
+
+/* Button Primary Styles - consistent with v1 */
+.btn-primary {
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
 }
